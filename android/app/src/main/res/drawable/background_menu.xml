@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android" android:insetLeft="0dp" android:insetRight="0dp" android:insetTop="0dp" android:insetBottom="0dp">
+    <shape android:shape="rectangle">
+        <gradient
+            android:startColor="@color/dialog_menu_start"
+            android:endColor="@color/dialog_menu_end"
+            android:centerColor="@color/dialog_menu_center"
+            android:angle="45"
+            android:centerX="60%"/>
+    </shape>
+</inset>

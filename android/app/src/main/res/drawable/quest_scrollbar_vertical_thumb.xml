@@ -1,0 +1,12 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/_8sdp" android:right="@dimen/_8sdp">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <gradient
+                android:startColor="@color/quest_scrollbar_start"
+                android:endColor="@color/quest_scrollbar_end"
+                android:angle="270.0"/>
+            <corners android:radius="@dimen/_10sdp"/>
+            <size android:width="@dimen/_5sdp"/>
+        </shape>
+    </item>
+</layer-list>

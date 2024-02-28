@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Touch Mobile</string>
+
+    <string name="players_list_header_dialog">Список игроков</string>
+    <string name="players_list_header_first_column">ID</string>
+    <string name="players_list_header_fourth_column">Пинг</string>
+    <string name="players_list_header_second_column">Ник игрока</string>
+    <string name="players_list_header_third_column">Уровень</string>
+    <string name="players_list_search_hint">Поиск игрока</string>
+</resources>

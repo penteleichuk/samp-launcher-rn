@@ -1,0 +1,263 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+	 xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto" android:id="@+id/speedometer" android:layout_width="match_parent" android:layout_height="match_parent">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/constraintLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/_8sdp"
+		custom:layout_constraintBottom_toBottomOf="parent"
+		custom:layout_constraintEnd_toEndOf="parent"
+		custom:layout_constraintStart_toStartOf="parent">
+
+		<ImageView
+			android:id="@+id/imageView5"
+			android:layout_width="@dimen/_80sdp"
+			android:layout_height="@dimen/_80sdp"
+			android:src="@drawable/speedo_center"
+			custom:layout_constraintBottom_toBottomOf="parent"
+			custom:layout_constraintEnd_toEndOf="parent"
+			custom:layout_constraintStart_toStartOf="parent"
+			custom:layout_constraintTop_toTopOf="parent" />
+
+		<com.touch.mobile.dark.gui.util.SeekArc
+			android:id="@+id/speed_line"
+			android:layout_width="@dimen/_80sdp"
+			android:layout_height="@dimen/_80sdp"
+			android:background="#00000000"
+			android:padding="@dimen/_5sdp"
+			android:rotation="270"
+			custom:arcColor="#00000000"
+			custom:layout_constraintBottom_toBottomOf="@id/imageView5"
+			custom:layout_constraintEnd_toEndOf="@id/imageView5"
+			custom:layout_constraintStart_toStartOf="@id/imageView5"
+			custom:layout_constraintTop_toTopOf="@id/imageView5"
+			custom:max="370"
+			custom:progress="233"
+			custom:progressColor="#FF5722"
+			custom:progressWidth="@dimen/_5sdp"
+			custom:sweepAngle="180"
+			custom:touchInside="true"
+			custom:enabled="false"/>
+
+		<TextView
+			android:id="@+id/speed_text"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/_17sdp"
+			android:fontFamily="@font/montserrat_bold"
+			android:shadowColor="#B91B1B1B"
+			android:shadowDx="1"
+			android:shadowDy="1"
+			android:shadowRadius="2"
+			android:text="47"
+			android:gravity="center"
+			android:textColor="@color/white"
+			android:textSize="@dimen/_15sdp"
+			custom:layout_constraintBottom_toBottomOf="@id/imageView5"
+			custom:layout_constraintEnd_toEndOf="@+id/imageView5"
+			custom:layout_constraintHorizontal_bias="0.508"
+			custom:layout_constraintStart_toStartOf="@id/imageView5"
+			custom:layout_constraintTop_toTopOf="parent"
+			custom:layout_constraintVertical_bias="0.16000003" />
+
+		<TextView
+			android:id="@+id/speed_km"
+			android:layout_width="23dp"
+			android:layout_height="11dp"
+			android:fontFamily="@font/montserrat_bold"
+			android:gravity="center"
+			android:shadowColor="#474747"
+			android:shadowDx="1"
+			android:shadowDy="1"
+			android:shadowRadius="2"
+			android:text="KM/H"
+			android:textColor="#858585"
+			android:textSize="@dimen/_7sdp"
+			android:textStyle="italic"
+			custom:layout_constraintEnd_toEndOf="@+id/speed_text"
+			custom:layout_constraintStart_toStartOf="@+id/speed_text"
+			custom:layout_constraintTop_toBottomOf="@+id/speed_text" />
+
+		<ImageView
+			android:id="@+id/imageView8"
+			android:layout_width="@dimen/_74sdp"
+			android:layout_height="@dimen/_40sdp"
+			android:layout_marginTop="1dp"
+			android:src="@drawable/speedo_scale"
+			custom:layout_constraintEnd_toEndOf="parent"
+			custom:layout_constraintStart_toStartOf="parent"
+			custom:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/textView2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="@dimen/_8sdp"
+			android:fontFamily="@font/montserrat_bold"
+			android:shadowColor="#B91B1B1B"
+			android:shadowDx="1"
+			android:shadowDy="1"
+			android:shadowRadius="2"
+			android:text="000002"
+			android:textColor="@color/white"
+			android:textSize="@dimen/_6sdp"
+			custom:layout_constraintBottom_toTopOf="@+id/linearLayout"
+			custom:layout_constraintEnd_toEndOf="parent"
+			custom:layout_constraintHorizontal_bias="0.464"
+			custom:layout_constraintStart_toStartOf="parent"
+			custom:layout_constraintTop_toBottomOf="@+id/speed_text"
+			custom:layout_constraintVertical_bias="0.731" />
+
+		<TextView
+			android:id="@+id/km"
+			android:layout_width="12dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="1dp"
+			android:fontFamily="@font/montserrat_bold"
+			android:shadowColor="#B9474747"
+			android:shadowDx="1"
+			android:shadowDy="1"
+			android:shadowRadius="2"
+			android:text="KM"
+			android:textColor="#858585"
+			android:textSize="@dimen/_6sdp"
+			custom:layout_constraintBottom_toBottomOf="@+id/textView2"
+			custom:layout_constraintStart_toEndOf="@+id/textView2"
+			custom:layout_constraintTop_toTopOf="@+id/textView2"
+			custom:layout_constraintVertical_bias="0.55" />
+
+		<LinearLayout
+			android:id="@+id/linearLayout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/_3sdp"
+			custom:layout_constraintBottom_toBottomOf="parent"
+			custom:layout_constraintEnd_toEndOf="parent"
+			custom:layout_constraintStart_toStartOf="parent">
+
+			<Space
+				android:layout_width="@dimen/_4sdp"
+				android:layout_height="wrap_content" />
+
+		</LinearLayout>
+
+		<ImageView
+			android:id="@+id/speed_engine_ico"
+			android:layout_width="@dimen/_10sdp"
+			android:layout_height="@dimen/_10sdp"
+			android:layout_marginTop="5dp"
+			android:layout_marginEnd="28dp"
+			android:src="@drawable/speedo_engine"
+			custom:layout_constraintBottom_toBottomOf="@+id/imageView5"
+			custom:layout_constraintEnd_toEndOf="parent"
+			custom:layout_constraintTop_toTopOf="@+id/imageView8"
+			custom:layout_constraintVertical_bias="0.588" />
+
+		<ImageView
+			android:id="@+id/speed_lock_ico"
+			android:layout_width="@dimen/_10sdp"
+			android:layout_height="@dimen/_10sdp"
+			android:layout_marginStart="28dp"
+			android:layout_marginTop="5dp"
+			android:backgroundTint="#FF0000"
+			android:backgroundTintMode="src_in"
+			android:src="@drawable/speedo_doors"
+			custom:layout_constraintBottom_toBottomOf="@+id/imageView5"
+			custom:layout_constraintStart_toStartOf="parent"
+			custom:layout_constraintTop_toTopOf="@+id/imageView8"
+			custom:layout_constraintVertical_bias="0.588" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<ImageView
+		android:id="@+id/imageView9"
+		android:layout_width="37dp"
+		android:layout_height="35dp"
+		android:layout_marginEnd="-15dp"
+		android:rotation="123"
+		android:rotationX="0"
+		android:src="@drawable/speedo_right"
+		custom:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+		custom:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+		custom:layout_constraintTop_toTopOf="@id/constraintLayout"
+		custom:layout_constraintVertical_bias="1.0" />
+
+	<ImageView
+		android:id="@+id/imageView11"
+		android:layout_width="12dp"
+		android:layout_height="9dp"
+		android:layout_marginTop="5dp"
+		android:src="@drawable/speedo_fuel"
+		custom:layout_constraintBottom_toBottomOf="@+id/imageView9"
+		custom:layout_constraintEnd_toEndOf="@+id/imageView9"
+		custom:layout_constraintStart_toStartOf="@+id/imageView9"
+		custom:layout_constraintTop_toTopOf="@+id/imageView9"
+		custom:layout_constraintVertical_bias="0.636" />
+
+	<TextView
+		android:id="@+id/speed_fuel_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:fontFamily="@font/montserrat_bold"
+		android:text="200"
+		android:textColor="@color/white"
+		android:textSize="@dimen/_6sdp"
+		android:shadowColor="#B91B1B1B"
+		android:shadowDx="1"
+		android:shadowDy="1"
+		android:shadowRadius="2"
+		android:gravity="center"
+		custom:layout_constraintBottom_toBottomOf="@+id/imageView9"
+		custom:layout_constraintEnd_toEndOf="@+id/imageView9"
+		custom:layout_constraintHorizontal_bias="0.52"
+		custom:layout_constraintStart_toStartOf="@+id/imageView9"
+		custom:layout_constraintTop_toTopOf="@+id/imageView9"
+		custom:layout_constraintVertical_bias="0.384" />
+
+	<ImageView
+		android:id="@+id/imageView12"
+		android:layout_width="37dp"
+		android:layout_height="35dp"
+		android:layout_marginStart="-15dp"
+		android:rotation="-4"
+		android:src="@drawable/speedo_right"
+		custom:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+		custom:layout_constraintStart_toEndOf="@+id/constraintLayout"
+		custom:layout_constraintTop_toTopOf="@+id/constraintLayout"
+		custom:layout_constraintVertical_bias="1.0" />
+
+	<ImageView
+		android:id="@+id/imageView13"
+		android:layout_width="12dp"
+		android:layout_height="9dp"
+		android:layout_marginTop="5dp"
+		android:rotationX="33"
+		android:src="@drawable/speedo_health"
+		custom:layout_constraintBottom_toBottomOf="@+id/imageView12"
+		custom:layout_constraintEnd_toEndOf="@+id/imageView12"
+		custom:layout_constraintStart_toStartOf="@+id/imageView12"
+		custom:layout_constraintTop_toTopOf="@+id/imageView12"
+		custom:layout_constraintVertical_bias="0.63" />
+
+	<TextView
+		android:id="@+id/speed_car_hp_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="3dp"
+		android:fontFamily="@font/montserrat_bold"
+		android:rotationX="-22"
+		android:shadowColor="#B91B1B1B"
+		android:shadowDx="1"
+		android:shadowDy="1"
+		android:shadowRadius="2"
+		android:text="100%"
+		android:textColor="@color/white"
+		android:textSize="@dimen/_6sdp"
+		custom:layout_constraintBottom_toBottomOf="@+id/imageView12"
+		custom:layout_constraintEnd_toEndOf="@+id/imageView12"
+		custom:layout_constraintHorizontal_bias="0.45"
+		custom:layout_constraintStart_toStartOf="@+id/imageView12"
+		custom:layout_constraintTop_toTopOf="@+id/imageView12"
+		custom:layout_constraintVertical_bias="0.384" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

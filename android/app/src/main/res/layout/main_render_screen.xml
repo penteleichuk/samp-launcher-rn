@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_fl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom">
+
+    <SurfaceView
+        android:id="@+id/main_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/ui_layout"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:id="@+id/main_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#a2ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <com.nvidia.devtech.CustomEditText
+                android:id="@+id/main_et_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="0.7"
+                android:ems="10"
+                android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/main_but_input_prev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:minWidth="11dip"
+                android:minHeight="11dip"
+                android:text="&#x22C1;"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/main_but_input_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:minWidth="11dip"
+                android:minHeight="11dip"
+                android:text="&#x22C0;"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/main_but_input_slash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:minWidth="11dip"
+                android:minHeight="11dip"
+                android:text="/"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <View android:id="@+id/dark_screen" android:background="#ff000000" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+        <include layout="@layout/hud_layout" />
+        <include layout="@layout/speedometer_layout"/>
+        <include layout="@layout/menu_dialog_layout" />
+        <include layout="@layout/dialog_layout" />
+        <include layout="@layout/notification_layout" />
+        <include layout="@layout/loading_layout" />
+        <include layout="@layout/hassle_tab" />
+    </FrameLayout>
+</FrameLayout>

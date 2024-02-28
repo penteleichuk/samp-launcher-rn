@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hassle_tab_main" android:background="@drawable/players_list_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/menu_list_cmd1" android:paddingTop="@dimen/_10sdp" android:paddingBottom="@dimen/_10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/_20sdp" android:paddingEnd="@dimen/_20sdp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:fontFamily="@font/muller_bold"
+            android:text="@string/players_list_header_dialog"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp" />
+        <TextView android:textSize="@dimen/_13sdp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/players_list_value_players" android:background="@drawable/players_list_bg_value_players" android:layout_width="@dimen/_100sdp" android:layout_height="@dimen/_30sdp" android:text="1000/1000" android:shadowColor="#33383838" android:shadowDx="2" android:shadowDy="2" android:shadowRadius="5" android:fontFamily="@font/muller_bold" android:layout_marginStart="@dimen/_10sdp"/>
+        <RelativeLayout android:layout_gravity="center" android:layout_width="@dimen/_200sdp" android:layout_height="@dimen/_30sdp" android:layout_weight="2" android:layout_marginEnd="@dimen/_10sdp">
+            <EditText android:textSize="@dimen/_10sdp" android:textColor="@color/white" android:textColorHint="@color/progress_gray" android:id="@+id/search_view" android:background="@drawable/players_list_border_search" android:layout_width="match_parent" android:layout_height="@dimen/_30sdp" android:hint="@string/players_list_search_hint" android:singleLine="true" android:inputType="text" android:imeOptions="actionGo|actionSend|actionDone|flagNoFullscreen|flagNoExtractUi" android:fontFamily="@font/muller_medium" android:paddingStart="@dimen/_10sdp"/>
+            <ImageView android:id="@+id/icon_clear_search_text" android:visibility="invisible" android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:layout_alignTop="@+id/search_view" android:layout_alignBottom="@+id/search_view" android:layout_marginEnd="@dimen/_13sdp" android:layout_alignEnd="@+id/search_view" app:srcCompat="@drawable/menu_close"/>
+            <ImageView android:id="@+id/icon_search_view" android:layout_width="@dimen/_15sdp" android:layout_height="@dimen/_10sdp" android:src="@drawable/ic_search" android:layout_alignTop="@+id/search_view" android:layout_alignBottom="@+id/search_view" android:layout_marginEnd="@dimen/_10sdp" android:layout_alignEnd="@+id/search_view"/>
+        </RelativeLayout>
+        <Button android:layout_gravity="center" android:id="@+id/players_list_close" android:background="@drawable/menu_close" android:layout_width="25dp" android:layout_height="25dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/players_list_name_column" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/menu_list_cmd1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/menu_list_cmd1">
+        <TextView android:textSize="@dimen/_10sdp" android:textColor="@color/progress_gray" android:layout_width="@dimen/_10sdp" android:layout_height="wrap_content" android:text="@string/players_list_header_first_column" android:layout_weight="1" android:fontFamily="@font/muller_bold" android:layout_marginStart="@dimen/_20sdp"/>
+        <TextView android:textSize="@dimen/_10sdp" android:textColor="@color/progress_gray" android:layout_width="@dimen/_40sdp" android:layout_height="wrap_content" android:text="@string/players_list_header_second_column" android:layout_weight="5" android:fontFamily="@font/muller_bold"/>
+        <TextView android:textSize="@dimen/_10sdp" android:textColor="@color/progress_gray" android:layout_width="@dimen/_17sdp" android:layout_height="wrap_content" android:text="@string/players_list_header_third_column" android:layout_weight="3" android:fontFamily="@font/muller_bold"/>
+        <TextView android:textSize="@dimen/_10sdp" android:textColor="@color/progress_gray" android:layout_width="@dimen/_20sdp" android:layout_height="wrap_content" android:text="@string/players_list_header_fourth_column" android:layout_weight="2" android:fontFamily="@font/muller_bold"/>
+    </LinearLayout>
+    <View android:id="@+id/view" android:background="@drawable/button_red_rectangle" android:layout_width="match_parent" android:layout_height="@dimen/_2sdp" android:layout_marginTop="@dimen/_5sdp" android:layout_below="@+id/players_list_name_column" android:layout_marginStart="@dimen/_15sdp" android:layout_marginEnd="@dimen/_15sdp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/players_list_name_column"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/players_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_320sdp"
+        android:layout_below="@+id/players_list_name_column"
+        android:fadeScrollbars="false"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarThumbVertical="@drawable/players_list_scroll_thumb"
+        android:scrollbarTrackVertical="@drawable/players_list_scroll_track"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.44"
+        tools:layout_editor_absoluteX="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

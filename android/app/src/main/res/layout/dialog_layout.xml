@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sd_dialog_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/dialog" android:background="@drawable/dialog_bg" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/sd_dialog_body" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_9sdp" android:layout_marginBottom="@dimen/_13sdp" android:maxWidth="@dimen/_400sdp" android:layout_marginStart="@dimen/_13sdp" android:layout_marginEnd="@dimen/_13sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHeight_max="@dimen/_250sdp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <!-- Заголовок -->
+            <TextView android:textSize="@dimen/_12sdp" android:textColor="@color/white" android:id="@+id/sd_dialog_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Название окна" android:maxLines="1" android:lines="1" android:singleLine="true" android:fontFamily="@font/muller_bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <!-- Текст -->
+            <ScrollView android:scrollbarSize="@dimen/_4sdp" android:scrollbarThumbVertical="@drawable/quest_scrollbar_vertical_thumb" android:scrollbarTrackVertical="@drawable/quest_scrollbar_vertical_track" android:scrollbarStyle="outsideOverlay" android:id="@+id/sd_dialog_text_layout" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_8sdp" android:layout_marginBottom="@dimen/_8sdp" android:fadeScrollbars="true" android:paddingEnd="@dimen/_8sdp" app:layout_constraintBottom_toTopOf="@+id/dialog_buttons" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHeight_max="@dimen/_171sdp" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/sd_dialog_caption" app:layout_constraintVertical_bias="0.0">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/_10sdp" android:textColor="@color/white" android:id="@+id/sd_dialog_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/_400sdp" android:text="Text\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText\nText" android:fontFamily="@font/muller_medium" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+            </ScrollView>
+            <!-- Инпут -->
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/sd_dialog_input_layout" android:background="@drawable/dialog_input_bg" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_8sdp" android:layout_marginBottom="@dimen/_8sdp" app:layout_constraintBottom_toTopOf="@+id/dialog_buttons" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/sd_dialog_text_layout">
+                <com.nvidia.devtech.CustomEditText
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="#ffffffff"
+                    android:textColorHint="#7affffff"
+                    android:id="@+id/sd_dialog_input"
+                    android:background="@drawable/dialog_input_bg"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:hint="Нажмите для ввода..."
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen"
+                    android:inputType="text"
+                    android:fontFamily="@font/muller_regular"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_6sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpUsage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- ДИАЛОГИ -->
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/sd_dialog_list_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:layout_marginBottom="@dimen/_6sdp" app:layout_constraintBottom_toTopOf="@+id/dialog_buttons" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHeight_max="@dimen/_171sdp" app:layout_constraintHeight_min="@dimen/_171sdp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/sd_dialog_caption">
+                <!-- Диалог таблист -->
+                <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/sd_dialog_tablist_row" android:paddingBottom="@dimen/_3sdp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/_9sdp" android:paddingEnd="@dimen/_17sdp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                    <TextView android:textSize="@dimen/_10sdp" android:textColor="@color/white" android:gravity="left" android:id="@+id/dialog_field1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Field1" android:maxLines="1" android:lines="1" android:singleLine="true" android:fontFamily="@font/roboto_medium" android:paddingEnd="@dimen/_5sdp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                    <TextView android:textSize="@dimen/_10sdp" android:textColor="@color/white" android:gravity="left" android:id="@+id/dialog_field2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Field2" android:maxLines="1" android:lines="1" android:singleLine="true" android:fontFamily="@font/roboto_medium" android:paddingEnd="@dimen/_5sdp" app:layout_constraintStart_toEndOf="@+id/dialog_field1" app:layout_constraintTop_toTopOf="parent" />
+                    <TextView android:textSize="@dimen/_10sdp" android:textColor="@color/white" android:gravity="left" android:id="@+id/dialog_field3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Field2" android:maxLines="1" android:lines="1" android:singleLine="true" android:fontFamily="@font/roboto_medium" android:paddingEnd="@dimen/_5sdp" app:layout_constraintStart_toEndOf="@+id/dialog_field2" app:layout_constraintTop_toTopOf="parent" />
+                    <TextView android:textSize="@dimen/_10sdp" android:textColor="@color/white" android:gravity="left" android:id="@+id/dialog_field4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Field4" android:maxLines="1" android:lines="1" android:singleLine="true" android:fontFamily="@font/roboto_medium" android:paddingEnd="20.0px" app:layout_constraintStart_toEndOf="@+id/dialog_field3" app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Диалог лист -->
+                <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/dialog_list" android:layout_width="wrap_content" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/sd_dialog_tablist_row">
+                    <com.touch.mobile.dark.gui.util.CustomRecyclerView
+                        android:scrollbarSize="@dimen/_4sdp" android:scrollbarThumbVertical="@drawable/quest_scrollbar_vertical_thumb" android:scrollbarTrackVertical="@drawable/quest_scrollbar_vertical_track" android:scrollbarStyle="outsideOverlay" android:id="@+id/sd_dialog_list_recycler" android:visibility="visible" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/_4sdp" android:layout_marginBottom="@dimen/_4sdp" android:minWidth="@dimen/_141sdp" android:fadeScrollbars="false" android:layout_marginStart="@dimen/_7sdp" android:layout_marginEnd="@dimen/_4sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Кнопки -->
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/dialog_buttons" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:layout_marginStart="@dimen/_6sdp" android:layout_marginEnd="@dimen/_6sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/sd_dialog_caption" app:layout_constraintVertical_bias="1.0">
+                <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/sd_button_positive" android:background="@drawable/dialog_first_btn_bg" android:layout_width="@dimen/_60sdp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                    <TextView android:textSize="@dimen/_9sdp" android:textColor="@color/white" android:id="@+id/sd_button_positive_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_4sdp" android:layout_marginBottom="@dimen/_4sdp" android:text="Войти" android:maxLines="1" android:lines="1" android:singleLine="true" android:fontFamily="@font/muller_bold" android:layout_marginStart="@dimen/_13sdp" android:layout_marginEnd="@dimen/_13sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/sd_button_negative" android:background="@drawable/dialog_second_btn_bg" android:visibility="visible" android:layout_width="@dimen/_60sdp" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_4sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/sd_button_positive" app:layout_constraintTop_toTopOf="parent">
+                    <TextView android:textSize="@dimen/_9sdp" android:textColor="@color/white" android:id="@+id/sd_button_negative_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_4sdp" android:layout_marginBottom="@dimen/_4sdp" android:text="Отмена" android:maxLines="1" android:lines="1" android:singleLine="true" android:fontFamily="@font/muller_bold" android:layout_marginStart="@dimen/_13sdp" android:layout_marginEnd="@dimen/_13sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

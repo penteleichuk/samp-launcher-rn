@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/menu_item" xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="150dp" android:layout_height="70dp">
+    <ImageView android:id="@+id/bcg_color_fill" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/background_br_input"/>
+    <ImageView android:id="@+id/item_menu_image" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginTop="10dp" android:layout_centerHorizontal="true"/>
+    <TextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/item_menu_name_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/item_menu_image" android:layout_centerHorizontal="true" android:fontFamily="@font/muller_bold"/>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "477666478715",
+    "project_id": "touch-mobile-dark",
+    "storage_bucket": "touch-mobile-dark.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477666478715:android:7ab25a6ab740702a7ab0de",
+        "android_client_info": {
+          "package_name": "com.touch.mobile.dark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477666478715-ktoe0v3t55cbmrj81rg5f09b6ejk5db2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.touch.mobile.dark",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "477666478715-ousfu3hm84f79mh1sv9nma3e0qm92gth.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoxROCFXb7HD5syyu5B1djXF_dV9gzQ_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477666478715-ousfu3hm84f79mh1sv9nma3e0qm92gth.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

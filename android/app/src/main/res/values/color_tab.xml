@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- button_red_rectangle: #fff24c12 -->
+    <!-- Цвет фона для левой кнопки -->
+    <color name="tab_button_gradient_start">#FF47152F</color>
+    <color name="tab_button_gradient_end">#FFFF0084</color>
+ 
+    <!-- Players_list_bg_value_players -->
+    <color name="tab_players_gradient_start">#FF47152F</color>
+    <color name="tab_players_gradient_end">#FFFF0084</color>
+
+    <!-- Players_list_bg_value_players -->
+    <color name="tab_scroll_gradient_start">#FF47152F</color>
+    <color name="tab_scroll_gradient_end">#FFFF0084</color>
+
+    <color name="tab_shadow_black">#4d000000</color>
+    <color name="tab_shadow_white">#2bffffff</color>
+</resources>

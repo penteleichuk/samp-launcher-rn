@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient android:startColor="@color/tab_scroll_gradient_start" android:endColor="@color/tab_scroll_gradient_end" android:angle="0" android:centerX="50%" android:centerColor="@color/tab_scroll_gradient_start"/>
+            <corners android:radius="@dimen/_100sdp"/>
+            <size android:width="@dimen/_6sdp"/>
+        </shape>
+    </item>
+</layer-list>

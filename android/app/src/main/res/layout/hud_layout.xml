@@ -1,0 +1,317 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hud_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="@dimen/_9sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/hud_star_1"
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:src="@drawable/ic_star" />
+
+        <ImageView
+            android:id="@+id/hud_star_2"
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:src="@drawable/ic_star" />
+
+        <ImageView
+            android:id="@+id/hud_star_3"
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:src="@drawable/ic_star" />
+
+        <ImageView
+            android:id="@+id/hud_star_4"
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:src="@drawable/ic_star" />
+
+        <ImageView
+            android:id="@+id/hud_star_5"
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:src="@drawable/ic_star" />
+
+        <ImageView
+            android:id="@+id/hud_star_6"
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:src="@drawable/ic_star" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="146dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"
+        android:layout_marginLeft="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:src="@drawable/hud_heart"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <ProgressBar
+        android:id="@+id/hud_health_pb"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="@dimen/_127sdp"
+        android:layout_height="@dimen/_7sdp"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:indeterminate="false"
+        android:progress="44"
+        android:progressDrawable="@drawable/progressbar"
+        android:progressTint="#ffff4141"
+        android:transformPivotX="@dimen/_120sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.48000002" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"
+        android:layout_marginLeft="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:src="@drawable/hud_armor"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"
+        android:layout_marginLeft="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:src="@drawable/hud_eat"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ProgressBar
+        android:id="@+id/hud_armor_pb"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="@dimen/_82sdp"
+        android:layout_height="@dimen/_7sdp"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:indeterminate="false"
+        android:progress="43"
+        android:progressDrawable="@drawable/progressbar"
+        android:progressTint="#7F87E1"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.48000002" />
+
+    <ImageView
+        android:id="@+id/hud_weapon"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/hud_armor_pb"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.527"
+        app:srcCompat="@drawable/weapon_0" />
+
+    <ProgressBar
+        android:id="@+id/hud_eat"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="@dimen/_82sdp"
+        android:layout_height="@dimen/_7sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:indeterminate="false"
+        android:progress="43"
+        android:progressDrawable="@drawable/progressbar"
+        android:progressTint="#E4A34C"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"
+        android:layout_marginLeft="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:src="@drawable/hud_ruble"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/hud_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="566,434,343"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_11sdp"
+        android:shadowColor="#B91B1B1B"
+		android:shadowDx="1"
+		android:shadowDy="1"
+		android:shadowRadius="2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/hud_ammo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="0/0"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_7sdp"
+        app:layout_constraintEnd_toEndOf="@+id/hud_weapon"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/hud_weapon"
+        app:layout_constraintTop_toBottomOf="@+id/hud_weapon" />
+
+    <ImageView
+        android:id="@+id/hud_menu"
+        android:layout_width="94dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/hud_menu"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/hud_inv"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/hud_inv"
+        app:layout_constraintStart_toEndOf="@+id/hud_menu"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/hud_donate"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/hud_donate"
+        app:layout_constraintStart_toEndOf="@+id/hud_inv"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/hud_menu3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="7dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/hud_bonus_img"
+        android:layout_width="15dp"
+        android:layout_height="11dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="-2dp"
+        android:src="@drawable/bonus"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/hud_donate"
+        app:layout_constraintTop_toTopOf="@+id/hud_donate" />
+
+    <TextView
+        android:id="@+id/hud_name"
+        android:layout_width="75dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="3dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="start"
+        android:shadowColor="#B91B1B1B"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text=" "
+        android:letterSpacing="0.1"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/hud_menu3"
+        app:layout_constraintStart_toEndOf="@+id/hud_menu3"
+        app:layout_constraintTop_toTopOf="@+id/hud_menu3"
+        app:layout_constraintVertical_bias="0.26999998" />
+
+    <TextView
+        android:id="@+id/hud_server_name"
+        android:layout_width="28dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/muller_bold"
+        android:gravity="start"
+        android:shadowColor="#B91B1B1B"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="TOUCH"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/_7sdp"
+        app:layout_constraintEnd_toEndOf="@+id/hud_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/hud_name"
+        app:layout_constraintTop_toBottomOf="@+id/hud_name" />
+
+    <TextView
+        android:id="@+id/hud_server_name2"
+        android:layout_width="28dp"
+        android:layout_height="10dp"
+        android:fontFamily="@font/muller_bold"
+        android:gravity="start"
+        android:shadowColor="#B91B1B1B"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="MOBILE"
+        android:textColor="#F5617B"
+        android:textSize="@dimen/_7sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/hud_server_name"
+        app:layout_constraintStart_toEndOf="@+id/hud_server_name"
+        app:layout_constraintTop_toTopOf="@+id/hud_server_name"
+        app:layout_constraintVertical_bias="0.24000001" />
+
+    <TextView
+        android:id="@+id/hud_bonus_text"
+        android:layout_width="15dp"
+        android:layout_height="11dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/hud_bonus_img"
+        app:layout_constraintEnd_toEndOf="@+id/hud_bonus_img"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/hud_bonus_img"
+        app:layout_constraintTop_toTopOf="@+id/hud_bonus_img" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

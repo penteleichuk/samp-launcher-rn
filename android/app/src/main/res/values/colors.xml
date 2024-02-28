@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bootsplash_background">#222122</color>
+
+    <color name="primary_dark">#613c8f</color>
+    <color name="status_bar_color">#613c8f</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="splashscreen_background">#000000</color>
+    <color name="iconBackground">#FFFFFF</color>
+
+    <!-- background_menu: #a0f24c12 -->
+    <!-- Цвет фона для главного меню -->
+    <color name="dialog_menu_start">#B3000000</color>
+    <color name="dialog_menu_end">#F2E44E9B</color>
+    <color name="dialog_menu_center">#BF000000</color>
+
+    <!-- Цвет фона для главного меню items -->
+    <color name="dialog_menu_item">#66351E2A</color>
+
+    <!-- Скролл диалога quest_scrollbar_vertical_thumb #ce0e03, #f75514 -->
+    <color name="quest_scrollbar_start">#9F2966</color>
+    <color name="quest_scrollbar_end">#681E44</color>
+
+    <!-- фон самих диалогов background_window_red, dialog_bg: #fff24c12 -->
+    <color name="dialog_window_start">#B3000000</color>
+    <color name="dialog_window_end">#F2E44E9B</color>
+    <color name="dialog_window_center">#BF000000</color>
+
+    <!-- Цвет фона для поля ввода -->
+    <color name="dialog_input_bg">#3B000000</color>
+
+    <!-- Цвет обводки для правой кнопки -->
+    <color name="dialog_second_btn_bg">#FFFF0084</color>
+
+    <!-- button_red_square, dialog_first_btn_bg, dialog_item_btn: #fff24c12 -->
+    <!-- Цвет фона для левой кнопки -->
+    <color name="dialog_gradient_start">#FF47152F</color>
+    <color name="dialog_gradient_end">#FFFF0084</color>
+
+    <!-- divider_br_red_s_corn #ce0e03, #f75514 -->
+    <!-- Неизвестно -->
+    <color name="divider_gradient_start">#FF47152F</color>
+    <color name="divider_gradient_end">#FFFF0084</color>
+
+    <color name="progress_gray">#FFD8D8D8</color>
+    <color name="default_blue_light">#ff33b5e5</color>
+    <color name="common_signin_btn_dark_text_default">@android:color/white</color>
+</resources>
