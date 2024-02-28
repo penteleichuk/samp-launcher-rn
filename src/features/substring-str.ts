@@ -1,4 +1,3 @@
-// Отрезать строку и ставим ...
 export const substringStr = (str: string, legth: number) => {
   if (!str) {
     return '';

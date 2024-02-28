@@ -1,16 +1,12 @@
 import { AppActionsType } from '../actions/appActions';
 
 const appInitState = {
-  // Инициализация приложения
   initial: false,
 
-  // Страница обновлений
   isUpdate: false,
 
-  // Выбранный сервер
   selectedServer: -1,
 
-  // GPU
   gpu: '',
 };
 

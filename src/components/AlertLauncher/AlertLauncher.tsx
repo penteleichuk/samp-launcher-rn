@@ -8,35 +8,18 @@ export const AlertLauncher = React.memo((props: AwesomeAlertProps) => {
   return (
     <AwesomeAlert
       {...props}
-      // Фон
       useNativeDriver={true}
       alertContainerStyle={{
         backgroundColor: '#010d3b3b',
       }}
-      // Фон
-      overlayStyle={
-        {
-          // backgroundColor: '#000000b7',
-        }
-      }
-      // progressSize=""
-      // progressColor=""
-
-      // Фон диалога
+      overlayStyle={{}}
       contentContainerStyle={{
         width: width,
-        // padding: 0,
         borderRadius: scale(9),
         overflow: 'hidden',
         backgroundColor: '#151a2b',
       }}
-      // Стили контента
-      contentStyle={
-        {
-          // padding: scale(15),
-          // backgroundColor: '#6a2f81',
-        }
-      }
+      contentStyle={{}}
       titleStyle={{
         fontSize: scale(15),
         color: '#d4ddff',
@@ -47,16 +30,8 @@ export const AlertLauncher = React.memo((props: AwesomeAlertProps) => {
         fontSize: scale(12),
         color: '#fff',
       }}
-      actionContainerStyle={
-        {
-          // margin: 0,
-          // padding: 0,
-        }
-      }
+      actionContainerStyle={{}}
       cancelButtonStyle={{
-        // marginLeft: 0,
-        // marginRight: 0,
-        // marginBottom: 0,
         backgroundColor: '#6b8afd',
         flex: 100,
         borderRadius: scale(12),
@@ -68,9 +43,6 @@ export const AlertLauncher = React.memo((props: AwesomeAlertProps) => {
         textAlign: 'center',
       }}
       confirmButtonStyle={{
-        // marginLeft: 0,
-        // marginRight: 0,
-        // marginBottom: 0,
         backgroundColor: '#6b8afd',
         flex: 100,
         borderRadius: scale(12),

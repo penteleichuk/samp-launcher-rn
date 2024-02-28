@@ -1,17 +1,14 @@
 import { PACKAGE_NAME } from '@env';
 import RNFS, { moveFile } from 'react-native-fs';
 
-// Загрузка файлов
 export const FileDownload = {
   download: async (props: DownloadFileType) => {
     const { fromUrl, toFile, toName, progress } = props;
 
     const toPatch = FilePath.getPathDirCache();
 
-    // Create array folders
     await FilePath.createPathCache(toPatch, toFile);
 
-    // Start download
     return RNFS.downloadFile({
       fromUrl,
       toFile: `${toPatch}/${toFile}/${toName}`,
@@ -21,24 +18,19 @@ export const FileDownload = {
   },
 };
 
-// Управление путями
 export const FilePath = {
-  // Получить путь проводника файлов
   getPathDirCache: () => {
     return `${RNFS.ExternalDirectoryPath}`;
   },
 
-  // Путь распаковки файлов
   getPathDirLauncher: () => {
     return `${RNFS.ExternalDirectoryPath}`;
   },
 
-  // Получить путь настроек
   getPathDirSetting: () => {
     return `/storage/emulated/0/Android/data/${PACKAGE_NAME}/files/SAMP/settings.ini`;
   },
 
-  // Генерация путей
   generatePathCache: (path: string): string[] => {
     if (!path) {
       return [];
@@ -57,19 +49,16 @@ export const FilePath = {
     return pathFinally;
   },
 
-  // Создание дерева путей
   createPathCache: async (toPatch: string, toFile: string) => {
     const getPathArray = FilePath.generatePathCache(toFile);
 
     if (getPathArray.length > 0) {
       for (let i = 0; i < getPathArray.length; i++) {
-        // Create dir
         if (!(await RNFS.exists(`${toPatch}/${getPathArray[i]}`))) {
           await RNFS.mkdir(`${toPatch}/${getPathArray[i]}`);
         }
       }
     } else {
-      // Create dir
       if (!(await RNFS.exists(`${toPatch}`))) {
         await RNFS.mkdir(`${toPatch}`);
       }
@@ -77,14 +66,12 @@ export const FilePath = {
   },
 };
 
-// Валидация файлов
 export const FileValidate = {
   isValidFileHash: async (localFile: string, validHash: string) => {
     const fileExists = await RNFS.exists(localFile);
     if (fileExists) {
       const fileHash = await RNFS.hash(localFile, 'md5');
 
-      // Файл найден, но не валидный
       return validHash === fileHash;
     }
 
@@ -98,7 +85,6 @@ export const FileValidate = {
     bytes,
     filesContinue,
   }: IsValidCacheType) => {
-    // Проверка на GPU
     if (
       gpuCache.length > 0 &&
       gpuCache.split('').some(element => element[0] === gpuSystem[0]) === false
@@ -126,7 +112,6 @@ export const FileValidate = {
     gpuCache: string;
     gpuSystem: string;
   }) => {
-    // Проверка на GPU
     if (
       gpuCache.length > 0 &&
       gpuCache.split('').some(element => element[0] === gpuSystem[0]) === false
@@ -138,9 +123,7 @@ export const FileValidate = {
   },
 };
 
-// Изменить название файла
 export const FileName = {
-  // Изменить data.etc на _data.etc и _data.etc на data.etc
   reversFiles: async (path: string, name: string, mode: number) => {
     const toPatch = FilePath.getPathDirCache();
     const filepath = `${toPatch}/${path}/${name}`;
@@ -149,7 +132,6 @@ export const FileName = {
     let needDownload = [0, 0];
     const reserveFilepath = `${toPatch}/${path}/__${name}`;
 
-    // Исходный файл
     const currentExists = await RNFS.exists(filepath);
     if (!currentExists) {
       needDownload[mode] = 1;
@@ -157,7 +139,6 @@ export const FileName = {
       await moveFile(filepath, reserveFilepath);
     }
 
-    // Новый файл
     const destExists = await RNFS.exists(destPath);
     if (!destExists) {
       needDownload[mode] = 1;
@@ -171,7 +152,7 @@ export const FileName = {
 
     return needDownload;
   },
-  // Переменновать файл
+
   renameFile: async (path: string, name: string, newName: string) => {
     const toPatch = FilePath.getPathDirCache();
     const filepath = `${toPatch}/${path}/${name}`;
@@ -189,7 +170,7 @@ export const FileName = {
       return false;
     }
   },
-  // Скрыть файл _
+
   hideFile: async (path: string, name: string) => {
     const toPatch = FilePath.getPathDirCache();
     const filepath = `${toPatch}/${path}/${name}`;
@@ -207,7 +188,7 @@ export const FileName = {
       return false;
     }
   },
-  // Показать файл _
+
   showFile: async (path: string, name: string) => {
     const toPatch = FilePath.getPathDirCache();
     const filepath = `${toPatch}/${path}/_${name}`;
@@ -227,7 +208,6 @@ export const FileName = {
   },
 };
 
-// ТИПЫ
 type DownloadFileType = {
   fromUrl: string;
   toFile: string;
@@ -236,12 +216,12 @@ type DownloadFileType = {
 };
 
 type IsValidCacheType = {
-  gpuCache: string; // GPU кеша
-  gpuSystem: string; // GPU телефона
-  path: string; // Путь файла
-  name: string; // Название файла
-  bytes: number; // Размер кеша в bytes
-  filesContinue: string[]; // Файлы которые нужно пропустить
+  gpuCache: string;
+  gpuSystem: string;
+  path: string;
+  name: string;
+  bytes: number;
+  filesContinue: string[];
 };
 
 export type DownloadProgressType = {

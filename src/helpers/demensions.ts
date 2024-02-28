@@ -20,10 +20,8 @@ export const moderateScale = MODERATE_SCALE;
 
 export const { width: WIDTH, height: HEIGHT } = Dimensions.get('screen');
 
-// Если есть вырез снизу
 export const HAS_NOTCH = DeviceInfo.hasNotch();
 
-// Если есть вырез сверху
 export const HAS_ISLAND = DeviceInfo.hasDynamicIsland();
 
 // SIZE

@@ -42,7 +42,6 @@ export const InitiationScreen = React.memo(
           }
         }
 
-        // Обновление лаунчера
         dispatch(autoUpdateLauncher());
       }
     }, [isInitial, isSuccessDownload, rejectCount]);
@@ -69,7 +68,6 @@ export const InitiationScreen = React.memo(
                 useNativeDriver={true}
                 indeterminate={true}
                 borderWidth={0}
-                // color={'#222122'}
                 color={'#647fd3'}
                 unfilledColor={'#2f3545'}
                 borderRadius={20}

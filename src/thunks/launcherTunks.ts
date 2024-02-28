@@ -13,7 +13,6 @@ import { AppThunk } from '../store/store';
 
 const toPatch = FilePath.getPathDirLauncher();
 
-// Установка лаунчер
 export const installLauncher = (): AppThunk => async (_, state) => {
   const { name } = state().distribution.launcher;
 
@@ -24,7 +23,6 @@ export const installLauncher = (): AppThunk => async (_, state) => {
   }
 };
 
-// Загрузка лаунчера
 export type UpdateLauncherType = {
   setIsError: (value: boolean) => void;
   setIsFetchDownload: (value: boolean) => void;
@@ -44,7 +42,6 @@ export const updateLauncher =
       }),
     );
 
-    // Загрузка файла
     try {
       await RNFS.downloadFile({
         fromUrl: `${cdnLauncher}/${launcher.name}`,
@@ -70,7 +67,6 @@ export const updateLauncher =
     }
   };
 
-// Автообновление лаунчера
 export const autoUpdateLauncher = (): AppThunk => async (_, state) => {
   const appDistributionVersion = state().distribution.launcher.appVersion;
 
@@ -81,13 +77,11 @@ export const autoUpdateLauncher = (): AppThunk => async (_, state) => {
     try {
       const pathDownloadFile = `${toPatch}/${appDistributionName}`;
 
-      // Если лаунчер загружен
       const isDownloadLauncher = await FileValidate.isValidFileHash(
         pathDownloadFile,
         appDistributionHash,
       );
 
-      // Маршруты
       if (isDownloadLauncher) {
         return navigationRef.current?.dispatch(
           StackActions.replace('LauncherUpdateScreen'),

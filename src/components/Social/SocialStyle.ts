@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     marginBottom: scale(15),
     paddingBottom: scale(15),
-    // marginTop: scale(15),
   },
   title: {
     textTransform: 'uppercase',

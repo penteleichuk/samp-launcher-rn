@@ -1,22 +1,16 @@
 import { AlertActionsType } from '../actions/alertActions';
 
 const AlertInitState = {
-  // Показать уведомление о доступе к файлам
   alertProtected: false,
 
-  // Показать уведомление о доступе к микрофону
   alertProtectedSound: false,
 
-  // Уведомление обновлении лаунчера
   alertUpdate: false,
 
-  // Уведомление если не установлен ник
   alertUserName: false,
 
-  // Уведомление что нужно скачать файлы
   alertUpadteMode: false,
 
-  // Показать уведомление о памяти
   alertSpace: {
     status: false,
     needSpace: 0,

@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {verticalScale} from 'react-native-size-matters';
-import {scale} from '../../helpers/demensions';
+import { StyleSheet } from 'react-native';
+import { verticalScale } from 'react-native-size-matters';
+import { scale } from '../../helpers/demensions';
 
 export const styles = StyleSheet.create({
   range: {
@@ -14,7 +14,6 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: scale(14),
-    // color: 'rgba(255, 255, 255, 0.5)',
     color: '#ffffff',
     marginBottom: verticalScale(1),
   },

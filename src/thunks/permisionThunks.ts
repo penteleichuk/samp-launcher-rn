@@ -2,7 +2,6 @@ import { PermissionsAndroid } from 'react-native';
 import { setPermisions } from '../actions/permisionActions';
 import { AppThunk } from '../store/store';
 
-// Запросить подтверждение на права
 export const fetchPermisions = (): AppThunk => async dispatch => {
   try {
     const granted = await PermissionsAndroid.requestMultiple([

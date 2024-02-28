@@ -1,36 +1,32 @@
 import { CacheType, LoaderActionsType } from '../actions/loaderActions';
 
 export type CompareType = {
-  successCount: number; // Успешно загруженных (сколько скачанных)
-  rejectCount: number; // Ошибка в загрузке (сколько скачать)
-  distributionCacheBytes: number; // Вес кеша (всех файлов)
-  downloadsCacheBytes: number; // Вес сколько скачалось
-  needDownloadsCacheBytes: number; // Вес сколько осталось скачать
-  // needDownload: CacheType[]; // Массив файлов которые нужно скачать
+  successCount: number;
+  rejectCount: number;
+  distributionCacheBytes: number;
+  downloadsCacheBytes: number;
+  needDownloadsCacheBytes: number;
 };
 
 export type DonwloadType = {
-  fileName?: string; // Файл который скачиваем
-  currentBytes?: number; // Сколько байт скачали (для каждого файла)
-  needBytes?: number; // Сколько байт нужно скачать (для каждого файла)
-  downloadBytes?: number; // Сколько всего байтов скачали
-  numberOfDownloads?: number; // Сколько файлов скачал
+  fileName?: string;
+  currentBytes?: number;
+  needBytes?: number;
+  downloadBytes?: number;
+  numberOfDownloads?: number;
 };
 
 const loaderInitState = {
-  // Файлы которые скачал / нужно качать (При запуске лаунчера)
   compare: {
     successCount: 0,
     rejectCount: 0,
     distributionCacheBytes: 0,
     downloadsCacheBytes: 0,
     needDownloadsCacheBytes: 0,
-    // needDownload: [] as CacheType[],
   } as CompareType,
 
   needDownload: [] as CacheType[],
 
-  // Процесс загрузки кеша
   downalod: {
     fileName: '',
     currentBytes: 0,
@@ -39,16 +35,13 @@ const loaderInitState = {
     numberOfDownloads: 0,
   } as DonwloadType,
 
-  // Сколько свободного памяти
   freeSpace: 0,
 
-  // Если файлы игры загружены (первый скрин)
   isSuccessDownload: false,
 
   messageLauncher: '',
   actionLauncher: '',
 
-  // Состояние загрузки ползунок
   loadingPercent: 0,
 };
 

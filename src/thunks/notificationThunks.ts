@@ -14,7 +14,6 @@ export const appRegisterDeviceForRemoteMessages = (): AppThunk => async () => {
   });
 };
 
-// Создать нотификацию
 export const createPushNotificationLoader = (): AppThunk => async dispatch => {
   dispatch(onUploadTaskEventLoader({ status: 'cancel' }));
 
@@ -24,7 +23,6 @@ export const createPushNotificationLoader = (): AppThunk => async dispatch => {
   });
 };
 
-// Обновление загрузки
 export const onUploadTaskEventLoader =
   (event): AppThunk =>
   async () => {

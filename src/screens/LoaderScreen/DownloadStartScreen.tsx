@@ -9,13 +9,11 @@ import { styles } from '../../styles/LoaderStyle';
 
 type InitiationScreenType = NativeStackScreenProps<any>;
 
-// Первый скрин, начать скачать игру
 export const DownloadStartScreen = React.memo(
   ({ navigation }: InitiationScreenType) => {
     const { fetchPermision } = usePermisionFile();
     const { fetchSpace } = useSpaceDownlload();
 
-    // Кнопка начало загрузки / обновление файлов
     const onPressDownload = () => {
       if (!fetchPermision()) {
         return;

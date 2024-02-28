@@ -54,7 +54,6 @@ const DetachedContentComponent = React.memo(
           opacity={1.3}
           appearsOnIndex={1}
           disappearsOnIndex={-1}
-          // pressBehavior={'close'}
           enableTouchThrough={false}
           onPress={onCloseBackdrop}>
           <BlurView
@@ -63,7 +62,6 @@ const DetachedContentComponent = React.memo(
             blurAmount={20}
             reducedTransparencyFallbackColor={'dark'}
           />
-          {/* <Pressable style={styles.flex} /> */}
         </BottomSheetBackdrop>
       ),
       [],

@@ -10,7 +10,6 @@ import * as Images from './../assets/images';
 
 type InitiationScreenType = NativeStackScreenProps<any>;
 
-// Первый скрин, начать скачать игру
 export const ModeScreen = React.memo(({ navigation }: InitiationScreenType) => {
   const dispatch = useAppDispatch();
 

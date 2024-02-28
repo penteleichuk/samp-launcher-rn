@@ -9,7 +9,6 @@ import { styles } from '../../styles/LoaderStyle';
 
 type InitiationScreenType = NativeStackScreenProps<any>;
 
-// Обновление кеша
 export const UpdateStartScreen = React.memo(
   ({ navigation }: InitiationScreenType) => {
     const { fetchPermision } = usePermisionFile();

@@ -6,7 +6,6 @@ import { useAppDispatch } from '../../hooks/useAppDispatch';
 import { styles } from '../../styles/LoaderStyle';
 import { installLauncher } from '../../thunks/launcherTunks';
 
-// Обновление лаунчера (скрин установки)
 export const LauncherUpdateScreen = React.memo(() => {
   const dispatch = useAppDispatch();
 

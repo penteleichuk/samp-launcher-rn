@@ -14,7 +14,6 @@ import { styles } from '../../styles/LoaderStyle';
 import { updateLauncher } from '../../thunks/launcherTunks';
 const width = Dimensions.get('window').width;
 
-// Скрин загрузки лаунчера
 export const LauncherDownloadScreen = React.memo(() => {
   const [isError, setIsError] = useState<boolean>(false);
   const [isFetchDownload, setIsFetchDownload] = useState<boolean>(false);

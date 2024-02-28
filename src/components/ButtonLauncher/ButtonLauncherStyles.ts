@@ -4,7 +4,6 @@ import { verticalScale } from 'react-native-size-matters';
 export const styles = StyleSheet.create({
   button: {
     position: 'relative',
-    // display: "none",
     display: 'flex',
     flexDirection: 'row',
     minWidth: verticalScale(216),

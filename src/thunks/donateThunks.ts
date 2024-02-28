@@ -2,7 +2,6 @@ import { setDonate } from '../actions/donateActions';
 import { DonateService } from '../services/donate.service';
 import { AppThunk } from '../store/store';
 
-// Получить донат
 export const fetchDonates = (): AppThunk => async dispatch => {
   try {
     const res = await DonateService.get();

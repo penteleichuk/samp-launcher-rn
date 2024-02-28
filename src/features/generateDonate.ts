@@ -7,7 +7,6 @@ type FormatDonate = {
   sizeSnapToInterval?: number[] | undefined;
 };
 
-// Формирование доната
 export const generateDonate = (
   donates: DonateType[],
   categories: DonateCategoriesType[],
@@ -34,7 +33,6 @@ export const generateDonate = (
   return data;
 };
 
-// Формирование доната
 export const getDonate = (
   donates: DonateType[],
   categoryId: number,

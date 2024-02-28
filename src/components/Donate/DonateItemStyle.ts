@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {scale, verticalScale} from '../../helpers/demensions';
+import { StyleSheet } from 'react-native';
+import { scale, verticalScale } from '../../helpers/demensions';
 
 export const styles = StyleSheet.create({
   title: {
@@ -62,7 +62,6 @@ export const styles = StyleSheet.create({
   content: {
     flexDirection: 'column',
     flex: 1,
-    // flexShrink: 1,
     marginTop: verticalScale(10),
     display: 'flex',
     justifyContent: 'space-between',

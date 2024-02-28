@@ -36,33 +36,27 @@ export const SettingsScreen = React.memo(() => {
   const settingMode = useAppSelector(selectModeType);
   const dispatch = useAppDispatch();
 
-  // Конец редактирование текста
   const onEndEditingUserName = React.useCallback((value: string) => {
     dispatch(fetchUserNameSetting(value));
     dispatch(setUserNameSetting({ userName: value }));
   }, []);
 
-  // Изменение значения
   const onValueChangeFps = React.useCallback((e: number) => {
     dispatch(setSettingFps({ fpsLimit: Math.floor(e) }));
   }, []);
 
-  // Сохранение значений
   const onSlidingCompleteFps = React.useCallback((e: number) => {
     dispatch(fetchFpsSetting(Math.floor(e)));
   }, []);
 
-  // Изменение значения
   const onValueChangePageSize = React.useCallback((e: number) => {
     dispatch(setSettingPageSize({ pageSize: Math.floor(e) }));
   }, []);
 
-  // Сохранение значений
   const onSlidingCompletePageSize = React.useCallback((e: number) => {
     dispatch(fetchPageSizeSetting(Math.floor(e)));
   }, []);
 
-  // Изменить мод
   const onValueChangeSnow = React.useCallback(async (value: boolean) => {
     setIsLoading(true);
 
@@ -77,19 +71,16 @@ export const SettingsScreen = React.memo(() => {
     setIsLoading(false);
   }, []);
 
-  // Изменить графику
   const onValueChangeGraphic = React.useCallback((value: boolean) => {
     dispatch(setSettingGraphic({ graphic: value ? 1 : 0 }));
     dispatch(fetchGraphicSetting(value ? 1 : 0));
   }, []);
 
-  // Изменить FPS
   const onValueChangeFPS = React.useCallback((value: boolean) => {
     dispatch(setSettingFpsCounter({ fpscounter: value ? 1 : 0 }));
     dispatch(fetchFPSSetting(value));
   }, []);
 
-  // Изменить траву
   const onValueChangeKeyboard = React.useCallback((value: boolean) => {
     dispatch(setSettingKeyboard({ androidKeyboard: value ? 1 : 0 }));
     dispatch(fetchKeyboardSetting(value));

@@ -1,10 +1,9 @@
-import {StyleSheet} from 'react-native';
-import {verticalScale} from 'react-native-size-matters';
-import {PADDING_HORIZONTAL, scale} from '../../helpers/demensions';
+import { StyleSheet } from 'react-native';
+import { verticalScale } from 'react-native-size-matters';
+import { PADDING_HORIZONTAL, scale } from '../../helpers/demensions';
 
 export const styles = StyleSheet.create({
   monitoring: {
-    // height: '100%',
     paddingBottom: verticalScale(20),
     paddingHorizontal: PADDING_HORIZONTAL,
     marginTop: verticalScale(15),
@@ -44,7 +43,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: scale(15),
     paddingVertical: verticalScale(3),
     borderRadius: scale(3),
-    transform: [{rotateY: '20deg'}, {rotateX: '-20deg'}],
+    transform: [{ rotateY: '20deg' }, { rotateX: '-20deg' }],
   },
   bonus: {
     fontSize: scale(17),

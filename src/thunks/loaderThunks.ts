@@ -21,7 +21,6 @@ import {
   onUploadTaskEventLoader,
 } from './notificationThunks';
 
-// Сравнить файлы если изменены
 export const compareFileRecursion =
   ({ caches }: { caches: CacheType[] }): AppThunk =>
   async (dispatch, state) => {
@@ -82,20 +81,17 @@ export const compareFileRecursion =
     );
   };
 
-// Начать загрузку файлов
 export const fetchStartDownload = (): AppThunk => async (dispatch, state) => {
   const { cdnCache } = state().distribution;
   const { rejectCount } = state().loader.compare;
   const { needDownload } = state().loader;
   const modeType = state().settings.modeType;
 
-  let numberOfDownloads = 0; // Количество файлов скачали
-  let downloadBytes = 0; // Сколько весят файлы которые скачали
+  let numberOfDownloads = 0;
+  let downloadBytes = 0;
 
-  // Регистрация пуш
   dispatch(createPushNotificationLoader());
 
-  // Инициализация пуш
   dispatch(
     onUploadTaskEventLoader({
       status: 'download',
@@ -107,29 +103,25 @@ export const fetchStartDownload = (): AppThunk => async (dispatch, state) => {
     }),
   );
 
-  // Цикл загрузки файлов
   for await (const cache of needDownload) {
     const { id, path: toFile, name: toName, bytes } = cache;
     const bytesValid = bytes.length > 1 ? bytes[modeType] : bytes[0];
     const urlValid =
       bytes.length > 1 && modeType > 0 ? cdnCache + '_snow' : cdnCache;
 
-    // Начало загрузки
     try {
-      // Указываем какой файл качаем
       dispatch(
         setDownloadLoader({
           download: {
             fileName: toName,
-            currentBytes: 0, // Сколько скачал
-            needBytes: bytesValid, // Сколько нужно скачать
-            numberOfDownloads, // Сколько нужно скачать
+            currentBytes: 0,
+            needBytes: bytesValid,
+            numberOfDownloads,
             downloadBytes,
           },
         }),
       );
 
-      // Запрос к вдс для загрузки
       const res = await FileDownload.download({
         fromUrl: `${urlValid}/${toFile}/${toName}`,
         toFile,
@@ -146,7 +138,6 @@ export const fetchStartDownload = (): AppThunk => async (dispatch, state) => {
         },
       });
 
-      // Файл найден - все гуд
       if (res.statusCode === 200) {
         numberOfDownloads++;
         downloadBytes += bytesValid;
@@ -154,7 +145,7 @@ export const fetchStartDownload = (): AppThunk => async (dispatch, state) => {
         dispatch(
           onUploadTaskEventLoader({
             status: 'download',
-            sizeFile: numberOfDownloads, // Какой по счету качает
+            sizeFile: numberOfDownloads,
             currentFile: rejectCount,
             size: numberOfDownloads,
             current: rejectCount,
@@ -183,7 +174,6 @@ export const fetchStartDownload = (): AppThunk => async (dispatch, state) => {
   return navigationRef.current?.dispatch(StackActions.replace('Main'));
 };
 
-// Сравнить файлы если изменены
 export const nameFileRecursion = (): AppThunk => async (dispatch, state) => {
   const cacheMode = state().distribution.cacheMode;
   const gpuSystem = state().app.gpu;

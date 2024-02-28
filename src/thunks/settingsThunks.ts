@@ -27,7 +27,6 @@ type SettingType = {
 
 const toPatch = FilePath.getPathDirSetting();
 
-// Формирование настроек
 export const fetchInitialSettings = (): AppThunk => async dispatch => {
   try {
     const res = await RNFS.readFile(toPatch, 'utf8');
@@ -61,7 +60,6 @@ export const fetchInitialSettings = (): AppThunk => async dispatch => {
   } catch (errors) {}
 };
 
-// Установить ник
 export const fetchUserNameSetting =
   (userName: string): AppThunk =>
   async () => {
@@ -78,7 +76,6 @@ export const fetchUserNameSetting =
     } catch (error) {}
   };
 
-// Установить фпс
 export const fetchFpsSetting =
   (value: number): AppThunk =>
   async () => {
@@ -92,7 +89,6 @@ export const fetchFpsSetting =
     } catch (error) {}
   };
 
-// Установить размер чата
 export const fetchPageSizeSetting =
   (value: number): AppThunk =>
   async () => {
@@ -111,7 +107,6 @@ export const fetchPageSizeSetting =
     } catch (error) {}
   };
 
-// Установить графики
 export const fetchGraphicSetting =
   (value: number): AppThunk =>
   async () => {
@@ -128,7 +123,6 @@ export const fetchGraphicSetting =
     } catch (error) {}
   };
 
-// Установить FPS
 export const fetchFPSSetting =
   (value: boolean): AppThunk =>
   async () => {
@@ -145,7 +139,6 @@ export const fetchFPSSetting =
     } catch (error) {}
   };
 
-// Установить Клавиатуру
 export const fetchKeyboardSetting =
   (value: boolean): AppThunk =>
   async () => {
@@ -164,7 +157,6 @@ export const fetchKeyboardSetting =
     } catch (error) {}
   };
 
-// Установить сервер
 export const fetchServerIdSetting =
   (value: number): AppThunk =>
   async () => {
@@ -181,7 +173,6 @@ export const fetchServerIdSetting =
     } catch (error) {}
   };
 
-// Установить мод
 export const fetchModeSetting =
   (value: number): AppThunk =>
   async dispatch => {
