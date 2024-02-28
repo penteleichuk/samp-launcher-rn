@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/penteleichuk/Samp-Launcher/blob/main/assets/images/logo.png" width="150" alt="Samp launcer Logo"></p>
+<p align="center"><img src="https://github.com/penteleichuk/Samp-Launcer/blob/main/assets/images/logo.png" width="150" alt="Samp launcer Logo"></p>
 
 ## About Samp Launcer
 
@@ -7,13 +7,13 @@ A mobile launcher that allows online play in GTA SA (SA-MP). It can download gam
 ## Screenshots
 
 <p align="center">
-<img src="https://github.com/penteleichuk/Samp-Launcher/blob/main/assets/images/2024-02-28 13.06.41.jpg" width="150" alt="Screenshot 1">
-<img src="https://github.com/penteleichuk/Samp-Launcher/blob/main/assets/images/2024-02-28 13.07.30.jpg" width="150" alt="Screenshot 2">
-<img src="https://github.com/penteleichuk/Samp-Launcher/blob/main/assets/images/Screenshot_20240228-124455.png" width="150" alt="Screenshot 4"></p>
+<img src="https://github.com/penteleichuk/Samp-Launcer/blob/main/assets/images/2024-02-28%2013.06.41.jpg" width="150" alt="Screenshot 1">
+<img src="https://github.com/penteleichuk/Samp-Launcer/blob/main/assets/images/2024-02-28%2013.07.30.jpg" width="150" alt="Screenshot 2">
+<img src="https://github.com/penteleichuk/Samp-Launcer/blob/main/assets/images/Screenshot_20240228-124455.png" width="150" alt="Screenshot 4"></p>
 <p align="center">
-<img src="https://github.com/penteleichuk/Samp-Launcher/blob/main/assets/images/Screenshot_20240228-124514.png" width="150" alt="Screenshot 5">
-<img src="https://github.com/penteleichuk/Samp-Launcher/blob/main/assets/images/Screenshot_20240228-125046.png" width="150" alt="Screenshot 6">
-<img src="https://github.com/penteleichuk/Samp-Launcher/blob/main/assets/images/Screenshot_20240228-131041.png" width="150" alt="Screenshot 7"></p>
+<img src="https://github.com/penteleichuk/Samp-Launcer/blob/main/assets/images/Screenshot_20240228-124514.png" width="150" alt="Screenshot 5">
+<img src="https://github.com/penteleichuk/Samp-Launcer/blob/main/assets/images/Screenshot_20240228-125046.png" width="150" alt="Screenshot 6">
+<img src="hhttps://github.com/penteleichuk/Samp-Launcer/blob/main/assets/images/Screenshot_20240228-131041.png" width="150" alt="Screenshot 7"></p>
 
 ## Getting Started
 
