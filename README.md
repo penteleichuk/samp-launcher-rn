@@ -24,8 +24,13 @@ A mobile launcher that allows online play in GTA SA (SA-MP). It can download gam
 
 ### Game cache
 
-1. Download [download cache](https://drive.google.com/file/d/1M4eNTUPSe12QgJgOd9wmyZiFbMk7PqJs/view?usp=sharing)
-2. Upload the files to your hosting.
+1. Download [download cache](https://drive.google.com/drive/folders/1Tk6Uhtf96_z_MwqyvJts7CXNxCr14AT3?usp=sharing)
+2. Download [download cache snow](https://drive.google.com/drive/folders/1J7O73eX8xzfMaD8AXMuXS9xodyjWB24G?usp=sharing)
+3. Upload the files to your hosting.
+
+### Distribution
+
+It is necessary to collect in the tree all the necessary files to run the client. The file should be uploaded to the server as well as the cache
 
 ### Installation
 
