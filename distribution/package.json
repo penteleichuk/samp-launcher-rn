@@ -1,0 +1,19 @@
+{
+  "name": "distribution",
+  "version": "1.0.0",
+  "description": "Generate distribution",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "16.15.1"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "glob": "^8.0.3"
+  },
+  "author": "vasyok28",
+  "license": "ISC"
+}
